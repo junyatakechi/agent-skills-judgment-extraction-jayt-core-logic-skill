@@ -2,7 +2,7 @@
 name: ai-skill-design-jayt-core-logic-skill
 description: "文脈: AIスキルの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   repository: "https://github.com/junyatakechi/ai-skill-design-jayt-core-logic-skill"
   author: "jayt"
   design: "人の判断を切り出すAIスキルの設計_v2.0.0"
@@ -32,10 +32,11 @@ metadata:
 | 依存の宣言と版 | 依存するスキルを書くとき・判断ファイルを変えたとき、版の範囲と版をどう上げるか | [dependencies.md](references/dependencies.md) | — | — |
 | 取り決めファイル | 取り決めファイルを書くとき、何を書き、判断ファイルとどう分けるか | [conventions.md](references/conventions.md) | 値の置き場所 | — |
 | 旧形式からの移し替え | 旧形式の判断ファイルや SKILL.md を今の型に移すとき、型に無い項目をどこへ移すか | [impl-legacy-migration.md](references/impl-legacy-migration.md) | 判断ファイルの形 | — |
-| 判断ファイルの細かな書き方 | 判断ファイルを書くとき、実測の印の欠け・未決のIDの区切り・ほかの理由を指す項目をどう書くか | [impl-judgment-details.md](references/impl-judgment-details.md) | 理由の書き方 | — |
+| 判断ファイルの細かな書き方 | 判断ファイルを書くとき、実測の印の欠け・未決のIDの区切り・ほかの理由を指す項目をどう書くか | [impl-judgment-details.md](references/impl-judgment-details.md) | 理由の書き方 | ○ |
+| 例に使う値 | 求める材料の形・README の頼み方・計算の例を書くとき、どの値を使うか | [impl-example-values.md](references/impl-example-values.md) | ロジックスキルに書かないもの | ○ |
 | 設定の不足の判断 | 一般的な業務知識のスキルを作る・直すとき、設定の不足の判断を足すか | [impl-missing-setup.md](references/impl-missing-setup.md) | 道具の種類 | — |
 | 形だけ直したときの版 | 中身を変えずに形だけを直したとき、版をどう上げるか | [impl-version-bump.md](references/impl-version-bump.md) | 依存の宣言と版 | — |
-| 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | 判断ファイルの形・理由の書き方・ロジックスキルの型・アプリケーションスキルの型 | — |
+| 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | 判断ファイルの形・理由の書き方・ロジックスキルの型・アプリケーションスキルの型・判断ファイルの細かな書き方・例に使う値 | — |
 
 # このスキルの設計上の決まりごと
 

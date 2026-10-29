@@ -12,6 +12,8 @@ Usage:
   reasons            理由の書き方                  → JSON（ファイルごとの問題）
   logic-skill-shape  ロジックスキルの型            → JSON（ファイルごとの問題）
   app-skill-shape    アプリケーションスキルの型    → JSON（ファイルごとの問題）
+  impl-judgment-details  判断ファイルの細かな書き方  → JSON（ファイルごとの問題）
+  impl-example-values    例に使う値                  → JSON（ファイルごとの問題）
 
 **型の決まり（章・列・キー・印・定型文）はこのスクリプトに書かない。** references/<判断>.md の
 「## 判断定数」の表と、references/skill-md-sentences.md の定型文を実行時に読む。
@@ -172,6 +174,7 @@ def judge_judgment_file(m):
     banned = words("judgment-file", "使わない見出し")
     const_cols = words("judgment-file", "判断定数の表の列")
     material_cols = words("judgment-file", "求める材料の表の列")
+    not_answered = val("judgment-file", "答えない問いの言い回し")
     for path, text in sorted(judgment_files(m).items()):
         h2 = headings(text, 2)
         if h2 != want:
@@ -185,6 +188,9 @@ def judge_judgment_file(m):
             problem(out, path, "「### 0. 判断全体」から始まっていない")
         if nums != [str(i) for i in range(len(nums))]:
             problem(out, path, f"答え方の番号が {', '.join(nums)}。0から順に振る")
+        for part in re.split(r"^### ", body, flags=re.M)[1:]:
+            if not part.startswith("0. ") and not_answered in strip_inline(part):
+                problem(out, path, f"「{not_answered}」が「0. 判断全体」の外（### {part.splitlines()[0]}）にある")
         for title, cols in (("判断定数", const_cols), ("求める材料", material_cols)):
             sec = section(text, title)
             header = first_table_header(sec)
@@ -296,11 +302,49 @@ def judge_app_skill_shape(m):
     return {"問題": out}
 
 
+def judge_impl_judgment_details(m):
+    out = []
+    sep = val("impl-judgment-details", "未決のIDの区切り")
+    ending = val("impl-judgment-details", "ほかの理由を指す項目の結び")
+    kinds = words("reasons", "理由の種類")
+    typed = re.compile(r"^(?:\d+\.|-) （(%s)）" % "|".join(kinds))
+    for path, text in sorted(judgment_files(m).items()):
+        for line in section(text, "未決").splitlines():
+            hit = re.match(r"^- (U\d+)(.?)", line.strip())
+            if hit and hit.group(2) != sep:
+                problem(out, path, f"未決 {hit.group(1)} のIDの後ろが「{sep}」でない")
+        for line in section(text, "答え方と理由").splitlines():
+            line = line.strip()
+            if typed.match(line) and line.endswith(ending):
+                problem(out, path, f"ほかの理由を指すだけの項目に種類が付いている: {line[:40]}")
+    return {"問題": out}
+
+
+def judge_impl_example_values(m):
+    out = []
+    files = need(m, "ファイル")
+    targets = [str(v) for v in need(m, "対象の値") if str(v).strip()]
+    pats = [(v, re.compile(r"(?<![\d.])%s(?![\d])" % re.escape(v)) if re.fullmatch(r"[\d.]+", v) else re.compile(re.escape(v)))
+            for v in targets]
+    for path, text in sorted(files.items()):
+        if not path.endswith(".md"):
+            continue
+        spots = re.findall(r"```.*?```", text, flags=re.S) + re.findall(r"`[^`\n]*`", strip_code(text))
+        if path == "README.md":
+            spots.append(section(text, "使い方"))
+        for v, pat in pats:
+            if any(pat.search(s) for s in spots):
+                problem(out, path, f"例（コード表記か README の使い方）に、対象の値「{v}」がある")
+    return {"問題": out}
+
+
 JUDGMENTS = {
     "judgment-file": judge_judgment_file,
     "reasons": judge_reasons,
     "logic-skill-shape": judge_logic_skill_shape,
     "app-skill-shape": judge_app_skill_shape,
+    "impl-judgment-details": judge_impl_judgment_details,
+    "impl-example-values": judge_impl_example_values,
 }
 
 
