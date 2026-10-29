@@ -10,7 +10,7 @@
 
 設計文書を写す判断。
 
-- （知見）設計文書の 4章の前置き・4-1・4-2 を写した。（出典：人の判断を切り出すAIスキルの設計_v1.0.0 の4章・4-1・4-2@2026-10-29）
+- （知見）設計文書の 4章の前置き・4-1・4-2 を写した。（出典：人の判断を切り出すAIスキルの設計_v2.0.0 の4章・4-1・4-2@2026-10-29）
 
 ### 1. 1つのロジックスキル＝1つの区切られた文脈にする
 
@@ -54,8 +54,8 @@
 |---|---|---|---|
 | core-logic の章 | 索引、このスキルの設計上の決まりごと | 見出し | 答え方2の理由1と同じ |
 | generic-logic の章 | 索引、手続きに使う道具、このスキルの設計上の決まりごと | 見出し | 答え方2の理由1と同じ |
-| core-logic の metadata | version、repository、author、design、design-url、design-rule | キー | 記録なし |
-| generic-logic の metadata | version、repository、design、design-url、design-rule | キー | 記録なし |
+| core-logic の metadata | version、repository、author、design、design-url | キー | 記録なし |
+| generic-logic の metadata | version、repository、design、design-url | キー | 記録なし |
 | 索引の列 | 判断名、扱うこと、ファイル、依存する判断、計算 | 列 | 答え方3の理由1と同じ |
 | core-logic の定型文の項目数 | 5 | 項目 | 記録なし |
 | generic-logic の定型文の項目数 | 6 | 項目 | 記録なし |
