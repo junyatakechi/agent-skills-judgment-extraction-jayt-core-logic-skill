@@ -25,6 +25,7 @@ Usage:
 """
 import json
 import os
+import posixpath
 import re
 import sys
 
@@ -317,6 +318,16 @@ def judge_impl_judgment_details(m):
             line = line.strip()
             if typed.match(line) and line.endswith(ending):
                 problem(out, path, f"ほかの理由を指すだけの項目に種類が付いている: {line[:40]}")
+    files = need(m, "ファイル")
+    for path, text in sorted(files.items()):
+        if not path.endswith(".md"):
+            continue
+        for link in re.findall(r"\]\(([^)\s#]+\.md)(?:#[^)]*)?\)", strip_inline(text)):
+            if "://" in link:
+                continue
+            target = posixpath.normpath(posixpath.join(posixpath.dirname(path), link))
+            if target not in files:
+                problem(out, path, f"リンク先が無い: {link}")
     return {"問題": out}
 
 
