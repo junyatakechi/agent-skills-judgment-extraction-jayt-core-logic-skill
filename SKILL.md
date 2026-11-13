@@ -5,7 +5,7 @@ metadata:
   version: "0.5.0"
   repository: "https://github.com/junyatakechi/ai-skill-design-jayt-core-logic-skill"
   author: "jayt"
-  design: "人の判断を切り出すAIスキルの設計_v2.1.1"
+  design: "人の判断を切り出すAIスキルの設計_v2.1.2"
   design-url: "https://app.notion.com/p/jay-t/AI-3eaf2fd6925e8102b86fee3b6b3dd5a3"
 ---
 
