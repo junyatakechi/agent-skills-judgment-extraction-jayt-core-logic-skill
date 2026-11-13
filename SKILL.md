@@ -2,10 +2,10 @@
 name: ai-skill-design-jayt-core-logic-skill
 description: "文脈: AIスキルの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
   repository: "https://github.com/junyatakechi/ai-skill-design-jayt-core-logic-skill"
   author: "jayt"
-  design: "人の判断を切り出すAIスキルの設計_v2.0.0"
+  design: "人の判断を切り出すAIスキルの設計_v2.1.1"
   design-url: "https://app.notion.com/p/jay-t/AI-3eaf2fd6925e8102b86fee3b6b3dd5a3"
 ---
 
@@ -17,7 +17,7 @@ metadata:
 | スキルの種類 | スキルを作るとき・判断を切り出すとき、ロジックスキルとアプリケーションスキルのどちらにし、core-logic と generic-logic のどちらにするか | [skill-kinds.md](references/skill-kinds.md) | — | — |
 | 判断の移し替え | 齟齬が見つかったとき・判断を別のスキルへ移すとき、どこへ切り出し、表とIDをどう直すか | [judgment-migration.md](references/judgment-migration.md) | スキルの種類 | — |
 | 道具の種類 | 道具を作るとき、判断に使う道具と手続きに使う道具のどちらにし、どのスキルに置くか | [tool-kinds.md](references/tool-kinds.md) | スキルの種類 | — |
-| 値の置き場所 | 値を書くとき、ロジックスキル・取り決めファイル・環境ファイル・材料のどこに置くか | [value-placement.md](references/value-placement.md) | — | — |
+| 値の置き場所 | 値を書くとき、ロジックスキル・取り決めファイル・`.env`・材料のどこに置くか | [value-placement.md](references/value-placement.md) | — | — |
 | 名前 | スキルに名前を付けるとき、どの形にし、作成者を入れるか | [naming.md](references/naming.md) | スキルの種類 | — |
 | README | README を書くとき、どの章に何を書き、何を書かないか | [readme.md](references/readme.md) | スキルの種類 | — |
 | description | description を書くとき、何をどの形で書くか | [description.md](references/description.md) | — | — |
@@ -36,7 +36,8 @@ metadata:
 | 例に使う値 | 求める材料の形・README の頼み方・計算の例を書くとき、どの値を使うか | [impl-example-values.md](references/impl-example-values.md) | ロジックスキルに書かないもの | ○ |
 | 設定の不足の判断 | 一般的な業務知識のスキルを作る・直すとき、設定の不足の判断を足すか | [impl-missing-setup.md](references/impl-missing-setup.md) | 道具の種類 | — |
 | 形だけ直したときの版 | 中身を変えずに形だけを直したとき、版をどう上げるか | [impl-version-bump.md](references/impl-version-bump.md) | 依存の宣言と版 | — |
-| 材料の形 | ロジックスキルの材料を決めるとき、アプリケーションスキルが判定を済ませた印を受け取るか、記録と語の一覧を受け取るか | [impl-material-shape.md](references/impl-material-shape.md) | スキルの種類・値の置き場所 | — |
+| 出力の様式の指し方 | アプリケーションスキルの手順で、出力の様式の取り決めを、どの節から指すか | [impl-output-format-reference.md](references/impl-output-format-reference.md) | アプリケーションスキルの型 | — |
+| 材料の形 | ロジックスキルの材料を決めるとき、どこまでをアプリケーションスキルで作り、どこからをロジックスキルに任せるか | [impl-material-shape.md](references/impl-material-shape.md) | スキルの種類・値の置き場所 | — |
 | 中核判断どうしの移し替え | 判断を、別の中核判断のスキルへ移すとき、何を一緒に移し、何を書き換えるか | [impl-core-logic-move.md](references/impl-core-logic-move.md) | 判断の移し替え | — |
 | 判断の削除 | 判断を削除するとき、何を確かめ、何を一緒に直すか | [impl-judgment-removal.md](references/impl-judgment-removal.md) | 判断の移し替え | — |
 | 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | 判断ファイルの形・理由の書き方・ロジックスキルの型・アプリケーションスキルの型・判断ファイルの細かな書き方・例に使う値 | — |
