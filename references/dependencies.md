@@ -56,7 +56,7 @@ metadata:
 
 | 材料 | 種類 | 必須 | 形 | 無いとき |
 |---|---|---|---|---|
-| 依存するスキルと、その版 | 対象の属性 | ○ | `[{"リポジトリ": "junyatakechi/notion-cli-generic-logic-skill", "版": "0.3.21"}]` | 判断できない |
+| 依存するスキルと、その版 | 対象の値 | ○ | `[{"リポジトリ": "junyatakechi/notion-cli-generic-logic-skill", "版": "0.3.21"}]` | 判断できない |
 
 ## 計算
 

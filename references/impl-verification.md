@@ -46,7 +46,7 @@ python -I -c "import json,os,sys; d=sys.argv[1]; f={os.path.relpath(os.path.join
 
 | 材料 | 種類 | 必須 | 形 | 無いとき |
 |---|---|---|---|---|
-| 作った・直したスキルの種類 | 対象の属性 | ○ | `"core-logic"`/`"generic-logic"`/`"アプリケーションスキル"` | 判断できない |
+| 作った・直したスキルの種類 | 対象の値 | ○ | `"core-logic"`/`"generic-logic"`/`"アプリケーションスキル"` | 判断できない |
 
 ## 計算
 
