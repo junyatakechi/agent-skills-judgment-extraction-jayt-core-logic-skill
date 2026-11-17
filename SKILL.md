@@ -2,7 +2,7 @@
 name: ai-skill-design-jayt-core-logic-skill
 description: "文脈: AIスキルの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.10.0"
+  version: "0.11.0"
   repository: "https://github.com/junyatakechi/ai-skill-design-jayt-core-logic-skill"
   author: "jayt"
   design: "人の判断を切り出すAIスキルの設計_v2.6.0"
@@ -41,6 +41,7 @@ metadata:
 | 中核判断どうしの移し替え | 判断を、別の中核判断のスキルへ移すとき、何を一緒に移し、何を書き換えるか | [impl-core-logic-move.md](references/impl-core-logic-move.md) | `judgment-migration.md` | — |
 | 判断の削除 | 判断を削除するとき、何を確かめ、何を一緒に直すか | [impl-judgment-removal.md](references/impl-judgment-removal.md) | `judgment-migration.md` | — |
 | 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | `judgment-file.md`・`reasons.md`・`logic-skill-shape.md`・`app-skill-shape.md`・`impl-judgment-details.md`・`impl-example-values.md` | — |
+| 依存関係の図 | 依存関係を人に説明するとき、索引の「依存する判断」から、どんな図を作って見せるか | [impl-dependency-graph.md](references/impl-dependency-graph.md) | `logic-skill-shape.md` | ○ |
 
 # このスキルの設計上の決まりごと
 
