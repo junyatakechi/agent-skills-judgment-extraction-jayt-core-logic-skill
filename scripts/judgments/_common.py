@@ -168,7 +168,7 @@ def common_shape(m, out, kind, chapter_key, meta_key, rule_count, rules):
     readme = files.get("README.md")
     if readme is not None:
         rh = headings(readme, 2)
-        want_rh = words("readme", "README の章")
+        want_rh = words("readme-contents", "README の章")
         if rh != want_rh:
             problem(out, "README.md", f"章が「{'・'.join(rh)}」。決まりは「{'・'.join(want_rh)}」")
     return files, skill
