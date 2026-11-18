@@ -1,4 +1,4 @@
-"""ai-skill-design-jayt-core-logic-skill の計算の共通の部品。
+"""agent-skills-judgment-extraction-jayt-core-logic-skill の計算の共通の部品。
 
 足りない材料の返し方（MissingMaterial・need）、判断定数の読み方（values・val・words）、
 本文の読み方（見出し・節・表）、依存先の読み込み（load）を、すべての判断の計算がここから使う。

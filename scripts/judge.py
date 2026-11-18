@@ -2,7 +2,7 @@
 # /// script
 # requires-python = ">=3.11"
 # ///
-"""ai-skill-design-jayt-core-logic-skill の計算の入口。スキルのファイルの本文を材料として受け取り、型を確かめる。
+"""agent-skills-judgment-extraction-jayt-core-logic-skill の計算の入口。スキルのファイルの本文を材料として受け取り、型を確かめる。
 
 Usage:
   uv run judge.py <判断> <材料.json>
