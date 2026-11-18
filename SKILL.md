@@ -2,10 +2,10 @@
 name: ai-skill-design-jayt-core-logic-skill
 description: "文脈: AIスキルの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.12.0"
+  version: "0.12.1"
   repository: "https://github.com/junyatakechi/ai-skill-design-jayt-core-logic-skill"
   author: "jayt"
-  design: "人の判断を切り出すAIスキルの設計_v2.7.0"
+  design: "人の判断を切り出すAIスキルの設計_v2.7.1"
   design-url: "https://app.notion.com/p/jay-t/AI-3eaf2fd6925e8102b86fee3b6b3dd5a3"
 ---
 
