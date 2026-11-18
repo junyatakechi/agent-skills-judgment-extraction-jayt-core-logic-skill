@@ -10,7 +10,7 @@
 
 設計文書を写す判断。
 
-- （知見）設計文書の 1-1 の依存の向きと、6-4 の版の規則と 6-8 を写した。（出典：人の判断を切り出すAgent Skillsの設計_v3.1.0 の1-1・6-4・6-8@2026-11-18）
+- （知見）設計文書の 1-1 の依存の向きと、6-4 の版の規則と 6-8 を写した。（出典：人の判断を切り出すAgent Skillsの設計_v3.6.0 の1-1・6-4・6-8@2026-11-18）
 
 ### 1. 依存は、frontmatter の `metadata.dependencies` に書く
 
@@ -19,8 +19,8 @@
 ```yaml
 metadata:
   dependencies: >-
-    github:junyatakechi/diet-process-<作成者>-core-logic-skill@^0.2.0,
-    github:junyatakechi/oura-collection-app-skill@^0.2.0
+    github:<owner>/diet-process-<作成者>-core-logic-skill@^0.2.0,
+    github:<owner>/oura-collection-app-skill@^0.2.0
 ```
 
 | 項目 | 書き方 |
