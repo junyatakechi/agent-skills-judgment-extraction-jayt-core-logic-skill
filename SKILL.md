@@ -2,7 +2,7 @@
 name: agent-skills-judgment-extraction-jayt-core-logic-skill
 description: "文脈: 人の判断を切り出すAgent Skillsの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.17.0"
+  version: "0.18.0"
   repository: "https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-core-logic-skill"
   author: "jayt"
   design: "人の判断を切り出すAgent Skillsの設計_v3.6.0"
@@ -16,6 +16,7 @@ metadata:
 | 判断の出所 | このスキルに判断を足す・直すとき、設計文書を写す判断か実装の判断かをどう見分け、それぞれをどう書き、どう直すか | [judgment-origin.md](references/judgment-origin.md) | — | — |
 | スキルの種類 | スキルを作るとき・判断を切り出すとき、ロジックスキルとアプリケーションスキルのどちらにし、core-logic と generic-logic のどちらにするか | [skill-kinds.md](references/skill-kinds.md) | — | — |
 | 判断の移し替え | 齟齬が見つかったとき・判断を別のスキルへ移すとき、どこへ切り出し、表とIDをどう直すか | [judgment-migration.md](references/judgment-migration.md) | `skill-kinds.md` | — |
+| 文脈と種類の見分け方 | 判断をスキルへ振り分けるとき・スキルを分ける・まとめるとき、文脈を何で切り、core-logic と generic-logic を何で見分けるか | [impl-context-and-kind.md](references/impl-context-and-kind.md) | `skill-kinds.md` | — |
 | 道具の種類 | 道具を作るとき、判断に使う道具と手続きに使う道具のどちらにし、どのスキルに置くか | [tool-kinds.md](references/tool-kinds.md) | `skill-kinds.md` | — |
 | 値の置き場所 | 値を書くとき、ロジックスキル・取り決めファイル・`.env`・材料のどこに置くか | [value-placement.md](references/value-placement.md) | — | — |
 | 名前 | スキルに名前を付けるとき、どの形にし、作成者を入れるか | [naming.md](references/naming.md) | `skill-kinds.md` | — |
