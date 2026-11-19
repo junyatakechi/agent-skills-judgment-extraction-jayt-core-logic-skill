@@ -2,7 +2,7 @@
 name: agent-skills-judgment-extraction-jayt-core-logic-skill
 description: "文脈: 人の判断を切り出すAgent Skillsの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.16.0"
+  version: "0.17.0"
   repository: "https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-core-logic-skill"
   author: "jayt"
   design: "人の判断を切り出すAgent Skillsの設計_v3.6.0"
@@ -45,6 +45,7 @@ metadata:
 | 手順の写し | アプリケーションスキルの手順を書く・直すとき、表と判断の答えの写しをどう見つけ、どう直すか | [impl-procedure-copies.md](references/impl-procedure-copies.md) | `app-skill-shape.md`・`skill-kinds.md` | ○ |
 | DBに置いた値の見分け方 | アプリケーションスキルが読むDBに、判断定数・判断の定義・取り決め・公知の事実の写しが混ざっていないかを、どう見分け、どこへ移すか | [impl-db-values.md](references/impl-db-values.md) | `value-placement.md`・`impl-material-shape.md` | ○ |
 | 依存関係の図 | 依存関係を人に説明するとき、索引の「依存する判断」から、どんな図を作って見せるか | [impl-dependency-graph.md](references/impl-dependency-graph.md) | `logic-skill-shape.md` | ○ |
+| 設計の言葉 | スキルを作る・直すときや、このスキルの答えを指示者に伝えるとき、人・値・スキルの種類を、どの言葉で呼ぶか | [impl-design-terms.md](references/impl-design-terms.md) | `value-placement.md` | — |
 
 # このスキルの設計上の決まりごと
 
