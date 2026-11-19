@@ -2,7 +2,7 @@
 name: agent-skills-judgment-extraction-jayt-core-logic-skill
 description: "文脈: 人の判断を切り出すAgent Skillsの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.15.0"
+  version: "0.16.0"
   repository: "https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-core-logic-skill"
   author: "jayt"
   design: "人の判断を切り出すAgent Skillsの設計_v3.6.0"
@@ -41,8 +41,9 @@ metadata:
 | 中核判断どうしの移し替え | 判断を、別の中核判断のスキルへ移すとき、何を一緒に移し、何を書き換えるか | [impl-core-logic-move.md](references/impl-core-logic-move.md) | `judgment-migration.md` | — |
 | 判断の削除 | 判断を削除するとき、何を確かめ、何を一緒に直すか | [impl-judgment-removal.md](references/impl-judgment-removal.md) | `judgment-migration.md` | — |
 | 使われなくなった .env のキー | スキルを直して `.env` のキーを使わなくなったとき、そのキーをどうするか | [impl-unused-env-keys.md](references/impl-unused-env-keys.md) | `value-placement.md` | — |
-| 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | `judgment-file.md`・`reasons.md`・`logic-skill-shape.md`・`app-skill-shape.md`・`impl-judgment-details.md`・`impl-example-values.md`・`impl-procedure-copies.md`・`impl-material-shape.md` | — |
+| 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | `judgment-file.md`・`reasons.md`・`logic-skill-shape.md`・`app-skill-shape.md`・`impl-judgment-details.md`・`impl-example-values.md`・`impl-procedure-copies.md`・`impl-material-shape.md`・`impl-db-values.md` | — |
 | 手順の写し | アプリケーションスキルの手順を書く・直すとき、表と判断の答えの写しをどう見つけ、どう直すか | [impl-procedure-copies.md](references/impl-procedure-copies.md) | `app-skill-shape.md`・`skill-kinds.md` | ○ |
+| DBに置いた値の見分け方 | アプリケーションスキルが読むDBに、判断定数・判断の定義・取り決め・公知の事実の写しが混ざっていないかを、どう見分け、どこへ移すか | [impl-db-values.md](references/impl-db-values.md) | `value-placement.md`・`impl-material-shape.md` | ○ |
 | 依存関係の図 | 依存関係を人に説明するとき、索引の「依存する判断」から、どんな図を作って見せるか | [impl-dependency-graph.md](references/impl-dependency-graph.md) | `logic-skill-shape.md` | ○ |
 
 # このスキルの設計上の決まりごと
