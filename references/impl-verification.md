@@ -14,10 +14,10 @@
 
 ### 1. 計算で型を確かめてから、設計文書の章と見比べる
 
-スキルを作った・直したあとは、まず計算で型を確かめる。判断ファイルには `judgment-file`・`reasons`・`impl-judgment-details`、ロジックスキルには `logic-skill-shape`、アプリケーションスキルには `app-skill-shape` を流し、題材にした記録から作ったときは `impl-example-values` も流す。`問題` が空になるまで直す。材料は、確かめるスキルのフォルダを呼び出し側がまとめて作る。
+スキルを作った・直したあとは、まず計算で型を確かめる。判断ファイルには `judgment-file`・`reasons`・`impl-judgment-details`、ロジックスキルには `logic-skill-shape`、アプリケーションスキルには `app-skill-shape`・`impl-procedure-copies`・`impl-material-shape` を流し、題材にした記録から作ったときは `impl-example-values` も流す。`問題` が空になるまで直す。材料は、確かめるスキルのフォルダを呼び出し側がまとめて作る。`impl-procedure-copies` には、依存するロジックスキルの `references/` も `判断先のファイル` として足す。
 
 ```bash
-python -I -c "import json,os,sys; d=sys.argv[1]; f={os.path.relpath(os.path.join(r,n),d).replace(os.sep,'/'): open(os.path.join(r,n),encoding='utf-8').read() for r,_,ns in os.walk(d) if '.git' not in r and '__pycache__' not in r for n in ns if n.endswith('.md') or n=='LICENSE'}; json.dump({'ファイル': f, '種類': sys.argv[2]}, open(sys.argv[3],'w',encoding='utf-8'), ensure_ascii=False)" <スキルのフォルダ> <core-logic|generic-logic|app> <材料.json>
+python -I -c "import json,os,sys; d=sys.argv[1]; f={os.path.relpath(os.path.join(r,n),d).replace(os.sep,'/'): open(os.path.join(r,n),encoding='utf-8').read() for r,_,ns in os.walk(d) if '.git' not in r and '__pycache__' not in r for n in ns if n.endswith(('.md','.py')) or n=='LICENSE'}; json.dump({'ファイル': f, '種類': sys.argv[2]}, open(sys.argv[3],'w',encoding='utf-8'), ensure_ascii=False)" <スキルのフォルダ> <core-logic|generic-logic|app> <材料.json>
 ```そのあと、計算では確かめられない中身（答え方の書き方・手順の組み方・理由の種類の選び方）を、写す判断ごとに設計文書の章と1つずつ見比べる。確かめたことと、確かめていないことを、指示者に伝える。
 
 1. （原因）型を目で確かめただけで終えたら、指示者に見直しを頼まれるまで、未決の指し方・手順のIDの書き方・却下した案の理由の抜けなど5か所のずれに気づかなかった。計算で確かめると、目で確かめたあとのファイルにもずれが見つかった。（発生日：2026-10-28）
