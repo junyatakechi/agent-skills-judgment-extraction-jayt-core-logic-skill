@@ -29,7 +29,7 @@ def _longest(a, b):
 def judge(m):
     out = []
     files = need(m, "ファイル")
-    steps = section(files.get("SKILL.md") or "", "手順", 1)
+    steps = section(files.get("SKILL.md") or "", "要求と打ち手", 1)
     answer_len = val(NAME, "判断の答えの写しとみなす長さ")
     allowed = words(NAME, "写しとみなさない言い回し")
 
