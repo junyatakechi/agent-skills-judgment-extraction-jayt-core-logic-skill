@@ -2,7 +2,7 @@
 name: agent-skills-judgment-extraction-jayt-core-logic-skill
 description: "文脈: 人の判断を切り出すAgent Skillsの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.18.0"
+  version: "0.19.0"
   repository: "https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-core-logic-skill"
   author: "jayt"
   design: "人の判断を切り出すAgent Skillsの設計_v3.6.0"
@@ -21,6 +21,7 @@ metadata:
 | 値の置き場所 | 値を書くとき、ロジックスキル・取り決めファイル・`.env`・材料のどこに置くか | [value-placement.md](references/value-placement.md) | — | — |
 | 名前 | スキルに名前を付けるとき、どの形にし、作成者を入れるか | [naming.md](references/naming.md) | `skill-kinds.md` | — |
 | README | README を書くとき、どの章に何を書き、何を書かないか | [readme-contents.md](references/readme-contents.md) | `skill-kinds.md` | — |
+| README に書かない読み込ませ方 | README のセットアップと使い方を書くとき、スキルを会話の最初に読み込ませる設定を書くか | [impl-readme-loading.md](references/impl-readme-loading.md) | `readme-contents.md`・`description.md` | — |
 | description | description を書くとき、何をどの形で書くか | [description.md](references/description.md) | — | — |
 | SKILL.md に入れる文 | SKILL.md に文を足すとき、入れるか、どの定型文を写し、frontmatter に何を書くか | [skill-md-sentences.md](references/skill-md-sentences.md) | `skill-kinds.md` | — |
 | 判断ファイルの形 | 判断ファイルを書く・直すとき、章をどう並べ、答え方・判断定数・未決・求める材料をどう書くか | [judgment-file.md](references/judgment-file.md) | `value-placement.md` | ○ |
