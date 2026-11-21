@@ -17,6 +17,7 @@ judgments/_common.py だけが持つ。頼まれた判断と、その依存先�
   impl-judgment-details  判断ファイルの細かな書き方    → JSON（ファイルごとの問題）
   impl-example-values    例に使う値                    → JSON（ファイルごとの問題）
   impl-dependency-graph  依存関係の図                  → JSON（Mermaid の flowchart と循環）
+  impl-table-links       表のファイル名のリンク        → JSON（ファイルごとの問題）
 
 **型の決まり（章・列・キー・印・定型文）はスクリプトに書かない。** references/<判断>.md の
 「## 判断定数」の表と、references/skill-md-sentences.md の定型文を実行時に読む。

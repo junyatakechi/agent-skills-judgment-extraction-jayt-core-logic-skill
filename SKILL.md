@@ -2,7 +2,7 @@
 name: agent-skills-judgment-extraction-jayt-core-logic-skill
 description: "文脈: 人の判断を切り出すAgent Skillsの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.22.1"
+  version: "0.23.0"
   repository: "https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-core-logic-skill"
   author: "jayt"
   design: "人の判断を切り出すAgent Skillsの設計_v4.0.0"
@@ -39,6 +39,7 @@ metadata:
 | 例に使う値 | 求める材料の形・README の頼み方・計算の例を書くとき、どの値を使うか | [impl-example-values.md](references/impl-example-values.md) | `logic-exclusions.md` | ○ |
 | 設定の不足の判断 | 一般的な業務知識のスキルを作る・直すとき、設定の不足の判断を足すか | [impl-missing-setup.md](references/impl-missing-setup.md) | `tool-kinds.md` | — |
 | 形だけ直したときの版 | 中身を変えずに形だけを直したとき、版をどう上げるか | [impl-version-bump.md](references/impl-version-bump.md) | `dependencies.md` | — |
+| 表のファイル名のリンク | アプリケーションスキルの SKILL.md の表にファイル名を書くとき、リンクにするか | [impl-table-links.md](references/impl-table-links.md) | `app-tables.md` | ○ |
 | 出力の様式の指し方 | アプリケーションスキルの手順で、出力の様式の取り決めを、どの節から指すか | [impl-output-format-reference.md](references/impl-output-format-reference.md) | `app-skill-shape.md` | — |
 | 目的と要求の言葉 | アプリケーションスキルの目的と要求を書くとき、誰の言葉で決め、AIエージェントが出した案をどう扱うか | [impl-purpose-wording.md](references/impl-purpose-wording.md) | `app-skill-shape.md` | — |
 | 材料の形 | ロジックスキルの材料を決めるとき、どこまでをアプリケーションスキルで作り、どこからをロジックスキルに任せるか | [impl-material-shape.md](references/impl-material-shape.md) | `skill-kinds.md`・`value-placement.md` | ○ |
@@ -46,7 +47,7 @@ metadata:
 | 判断の削除 | 判断を削除するとき、何を確かめ、何を一緒に直すか | [impl-judgment-removal.md](references/impl-judgment-removal.md) | `judgment-migration.md` | — |
 | 答え方の削除 | 判断ファイルの答え方を1つ消すように頼まれたとき、消すか、「〜しない」に置き換えるか、番号をどうするか | [impl-answer-removal.md](references/impl-answer-removal.md) | `judgment-file.md` | — |
 | 使われなくなった .env のキー | スキルを直して `.env` のキーを使わなくなったとき、そのキーをどうするか | [impl-unused-env-keys.md](references/impl-unused-env-keys.md) | `value-placement.md` | — |
-| 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | `judgment-file.md`・`reasons.md`・`logic-skill-shape.md`・`app-skill-shape.md`・`impl-judgment-details.md`・`impl-example-values.md`・`impl-procedure-copies.md`・`impl-material-shape.md`・`impl-db-values.md`・`impl-logic-app-boundary.md` | — |
+| 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | `judgment-file.md`・`reasons.md`・`logic-skill-shape.md`・`app-skill-shape.md`・`impl-judgment-details.md`・`impl-example-values.md`・`impl-procedure-copies.md`・`impl-material-shape.md`・`impl-db-values.md`・`impl-logic-app-boundary.md`・`impl-table-links.md` | — |
 | 手順の写し | アプリケーションスキルの手順を書く・直すとき、表と判断の答えの写しをどう見つけ、どう直すか | [impl-procedure-copies.md](references/impl-procedure-copies.md) | `app-skill-shape.md`・`skill-kinds.md` | ○ |
 | DBに置いた値の見分け方 | アプリケーションスキルが読むDBに、判断定数・判断の定義・取り決め・公知の事実の写しが混ざっていないかを、どう見分け、どこへ移すか | [impl-db-values.md](references/impl-db-values.md) | `value-placement.md`・`impl-material-shape.md` | ○ |
 | 依存関係の図 | 依存関係を人に説明するとき、索引の「依存する判断」から、どんな図を作って見せるか | [impl-dependency-graph.md](references/impl-dependency-graph.md) | `logic-skill-shape.md` | ○ |

@@ -45,7 +45,9 @@ def judge(m):
         for row in table_rows(section(skill, t, 1)):
             if row and re.match(r"^[JGRC]\d+$", row[0]) and f"`{row[0]}`" not in body:
                 problem(out, "SKILL.md", f"{t}の {row[0]} が手順から指されていない")
-    listed = {r[2].strip("`") for r in table_rows(section(skill, "まだ切り出していない判断の表", 1)) if len(r) > 2}
+    # 判断先は `x.md` のコード表記か、[x.md](references/x.md) のリンク（表のファイル名のリンク）で書かれる
+    listed = {re.sub(r"^\[([^\]]+)\]\(.*\)$", r"\1", r[2]).strip("`")
+              for r in table_rows(section(skill, "まだ切り出していない判断の表", 1)) if len(r) > 2}
     present = {p.split("/", 1)[1] for p in judgment_files(m)}
     for f in sorted(listed - present):
         problem(out, "SKILL.md", f"まだ切り出していない判断の表の {f} が references/ に無い")
