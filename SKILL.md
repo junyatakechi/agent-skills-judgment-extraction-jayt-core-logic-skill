@@ -2,7 +2,7 @@
 name: agent-skills-judgment-extraction-jayt-core-logic-skill
 description: "文脈: 人の判断を切り出すAgent Skillsの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.22.0"
+  version: "0.22.1"
   repository: "https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-core-logic-skill"
   author: "jayt"
   design: "人の判断を切り出すAgent Skillsの設計_v4.0.0"
@@ -44,7 +44,7 @@ metadata:
 | 材料の形 | ロジックスキルの材料を決めるとき、どこまでをアプリケーションスキルで作り、どこからをロジックスキルに任せるか | [impl-material-shape.md](references/impl-material-shape.md) | `skill-kinds.md`・`value-placement.md` | ○ |
 | 中核判断どうしの移し替え | 判断を、別の中核判断のスキルへ移すとき、何を一緒に移し、何を書き換えるか | [impl-core-logic-move.md](references/impl-core-logic-move.md) | `judgment-migration.md` | — |
 | 判断の削除 | 判断を削除するとき、何を確かめ、何を一緒に直すか | [impl-judgment-removal.md](references/impl-judgment-removal.md) | `judgment-migration.md` | — |
-| 答え方の削除 | 判断ファイルの答え方を1つ消すように頼まれたとき、消すか、「〜しない」に置き換えるか | [impl-answer-removal.md](references/impl-answer-removal.md) | `judgment-file.md` | — |
+| 答え方の削除 | 判断ファイルの答え方を1つ消すように頼まれたとき、消すか、「〜しない」に置き換えるか、番号をどうするか | [impl-answer-removal.md](references/impl-answer-removal.md) | `judgment-file.md` | — |
 | 使われなくなった .env のキー | スキルを直して `.env` のキーを使わなくなったとき、そのキーをどうするか | [impl-unused-env-keys.md](references/impl-unused-env-keys.md) | `value-placement.md` | — |
 | 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | `judgment-file.md`・`reasons.md`・`logic-skill-shape.md`・`app-skill-shape.md`・`impl-judgment-details.md`・`impl-example-values.md`・`impl-procedure-copies.md`・`impl-material-shape.md`・`impl-db-values.md`・`impl-logic-app-boundary.md` | — |
 | 手順の写し | アプリケーションスキルの手順を書く・直すとき、表と判断の答えの写しをどう見つけ、どう直すか | [impl-procedure-copies.md](references/impl-procedure-copies.md) | `app-skill-shape.md`・`skill-kinds.md` | ○ |
