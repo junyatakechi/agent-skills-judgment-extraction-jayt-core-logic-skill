@@ -134,6 +134,37 @@ def frontmatter_metadata(text):
     return keys
 
 
+def judgment_frontmatter(text):
+    """判断ファイルの先頭の frontmatter を {最上位のキー: {ID: {キー: 値}}} で返す。無ければ None。
+
+    判断ファイルの frontmatter は、出典を `sources:` → `  S1:` → `    name: "..."` の決まった形で持つ。
+    YAMLの全体は読まず、この形だけを標準ライブラリで読む。
+    """
+    if not text.startswith("---\n"):
+        return None
+    end = text.find("\n---\n", 3)
+    if end == -1:
+        return None
+    out, top, item = {}, None, None
+    for line in text[4:end].splitlines():
+        if not line.strip():
+            continue
+        m = re.match(r"^([A-Za-z_-]+):\s*$", line)
+        if m:
+            top, item = m.group(1), None
+            out[top] = {}
+            continue
+        m = re.match(r"^  ([A-Za-z0-9_-]+):\s*$", line)
+        if m and top is not None:
+            item = m.group(1)
+            out[top][item] = {}
+            continue
+        m = re.match(r'^    ([A-Za-z_-]+):\s*"(.*)"\s*$', line)
+        if m and top is not None and item is not None:
+            out[top][item][m.group(1)] = m.group(2).replace('\\"', '"').replace("\\\\", "\\")
+    return out
+
+
 def problem(out, path, msg):
     out.append({"ファイル": path, "内容": msg})
 

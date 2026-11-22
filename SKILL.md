@@ -2,10 +2,10 @@
 name: agent-skills-judgment-extraction-jayt-core-logic-skill
 description: "文脈: 人の判断を切り出すAgent Skillsの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.23.0"
+  version: "0.24.0"
   repository: "https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-core-logic-skill"
   author: "jayt"
-  design: "人の判断を切り出すAgent Skillsの設計_v4.0.0"
+  design: "人の判断を切り出すAgent Skillsの設計_v5.0.0"
   design-url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
 ---
 
@@ -25,7 +25,7 @@ metadata:
 | description | description を書くとき、何をどの形で書くか | [description.md](references/description.md) | — | — |
 | SKILL.md に入れる文 | SKILL.md に文を足すとき、入れるか、どの定型文を写し、frontmatter に何を書くか | [skill-md-sentences.md](references/skill-md-sentences.md) | `skill-kinds.md` | — |
 | 判断ファイルの形 | 判断ファイルを書く・直すとき、章をどう並べ、答え方・判断定数・未決・求める材料をどう書くか | [judgment-file.md](references/judgment-file.md) | `value-placement.md` | ○ |
-| 理由の書き方 | 判断ファイルに理由を書くとき、種類をどう選び、文末の印をどう付けるか | [reasons.md](references/reasons.md) | — | ○ |
+| 理由の書き方 | 判断ファイルに理由を書くとき、種類をどう選び、文末の印と出典をどう書くか | [reasons.md](references/reasons.md) | — | ○ |
 | ロジックスキルの型 | ロジックスキルの SKILL.md を書くとき、どの章を置き、索引をどう書くか | [logic-skill-shape.md](references/logic-skill-shape.md) | `judgment-file.md` | ○ |
 | 判断に使う道具の作り方 | `judge.py` を作る・直すとき、呼び方・失敗の返し方・判断定数の読み方をどうするか | [judge-tool.md](references/judge-tool.md) | `tool-kinds.md`・`value-placement.md` | — |
 | ロジックスキルに書かないもの | ロジックスキルに書くとき、何を書かないか | [logic-exclusions.md](references/logic-exclusions.md) | `value-placement.md` | — |

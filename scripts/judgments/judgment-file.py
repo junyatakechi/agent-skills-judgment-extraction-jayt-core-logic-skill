@@ -1,7 +1,7 @@
 """判断ファイルの形（references/judgment-file.md）の計算。"""
 import re
 
-from _common import first_table_header, headings, judgment_files, problem, section, strip_inline, val, words
+from _common import first_table_header, headings, judgment_files, judgment_frontmatter, problem, section, strip_inline, val, words
 
 
 def judge(m):
@@ -11,7 +11,17 @@ def judge(m):
     const_cols = words("judgment-file", "判断定数の表の列")
     material_cols = words("judgment-file", "求める材料の表の列")
     not_answered = val("judgment-file", "答えない問いの言い回し")
+    fm_keys = words("judgment-file", "判断ファイルの frontmatter のキー")
     for path, text in sorted(judgment_files(m).items()):
+        fm = judgment_frontmatter(text)
+        if text.startswith("---\n") and fm is None:
+            problem(out, path, "frontmatter が閉じていない")
+        if fm is not None:
+            extra = [k for k in fm if k not in fm_keys]
+            if extra:
+                problem(out, path, f"frontmatter に、決まりの外のキー「{'・'.join(extra)}」がある")
+            if not any(fm.get(k) for k in fm_keys):
+                problem(out, path, "frontmatter に出典が無い。出典が無ければ frontmatter を置かない")
         h2 = headings(text, 2)
         if h2 != want:
             problem(out, path, f"章が「{'・'.join(h2)}」。決まりは「{'・'.join(want)}」")
