@@ -2,9 +2,14 @@
 sources:
   S1:
     name: "人の判断を切り出すAgent Skillsの設計"
-    version: "v4.0.0"
+    version: "4.0.0"
     url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
     checked: "2026-11-20"
+  S2:
+    name: "人の判断を切り出すAgent Skillsの設計"
+    version: "6.0.0"
+    url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
+    checked: "2026-11-22"
 ---
 
 # SKILL.md に入れる文
@@ -20,6 +25,7 @@ SKILL.md に文を足すとき、入れるか、どの定型文を写し、front
 設計文書を写す判断。
 
 - （知見）設計文書の 3-5 を写した。（出典：S1）
+- （知見）答え方2は、設計文書の 3-5 を写した。（出典：S2）
 
 ### 1. 文を消したら実行するAIエージェントの行動が変わるかで、入れるかを決める
 
@@ -33,9 +39,10 @@ SKILL.md に文を足すとき、入れるか、どの定型文を写し、front
 
 ### 2. frontmatter に、従う設計文書を書く
 
-`metadata.design` に設計文書の題名を版つきで、`metadata.design-url` にその場所を書く。YAMLのコメントでは書かない。作る・直すときに何に従わせるかは、frontmatter に書かない（→ 答え方5）。
+`metadata.design-name` に設計文書の題名を版なしで、`metadata.design-version` に版を、`metadata.design-url` にその場所を書く。版は、頭に v を付けずに書く。YAMLのコメントでは書かない。作る・直すときに何に従わせるかは、frontmatter に書かない（→ 答え方5）。
 
 1. （根拠）YAMLを読み込んで書き戻す道具では、コメントが消えることがある。frontmatter は、スキルを呼んだときには読まれず、スキルを直すためにファイルを開けば読まれ、スキルを渡しても参照先がついて行く。（決定日：記録なし）
+2. （根拠）版を題名から切り離すと、版だけを機械的に見比べられ、題名を言い換えても比較が壊れない。（決定日：2026-11-22）
 
 ### 3. 実行時に効く決まりは、種類ごとの定型文を写し、書き足さない
 

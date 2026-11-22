@@ -28,6 +28,8 @@ def judge(m):
             extra = [k for k in src if k not in src_keys]
             if extra:
                 problem(out, path, f"出典 {sid} に、決まりの外のキー「{'・'.join(extra)}」がある")
+            if re.match(r"^v\d", src.get("version", "")):
+                problem(out, path, f"出典 {sid} の version が「{src['version']}」。数字の版は頭に v を付けない")
             if sid not in used:
                 problem(out, path, f"出典 {sid} が、どの理由からも指されていない")
     return {"問題": out}

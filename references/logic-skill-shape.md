@@ -2,9 +2,14 @@
 sources:
   S1:
     name: "人の判断を切り出すAgent Skillsの設計"
-    version: "v3.6.0"
+    version: "3.6.0"
     url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
     checked: "2026-11-18"
+  S2:
+    name: "人の判断を切り出すAgent Skillsの設計"
+    version: "6.0.0"
+    url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
+    checked: "2026-11-22"
 ---
 
 # ロジックスキルの型
@@ -20,6 +25,7 @@ sources:
 設計文書を写す判断。
 
 - （知見）設計文書の 1-1・5章の前置き・5-1・5-2 を写した。（出典：S1）
+- （知見）metadata のキーは、設計文書の 5-1 を写した。（出典：S2）
 
 ### 1. 1つのロジックスキル＝1つの区切られた文脈にする
 
@@ -64,8 +70,8 @@ sources:
 |---|---|---|---|
 | core-logic の章 | 索引、このスキルの設計上の決まりごと | 見出し | 答え方2の理由1と同じ |
 | generic-logic の章 | 索引、手続きに使う道具、このスキルの設計上の決まりごと | 見出し | 答え方2の理由1と同じ |
-| core-logic の metadata | version、repository、author、design、design-url | キー | 記録なし |
-| generic-logic の metadata | version、repository、design、design-url | キー | 記録なし |
+| core-logic の metadata | skill-version、design-name、design-version、design-url | キー | （根拠）読まれないキーを置かず、名前と重なる値を持たない。（決定日：2026-11-22） |
+| generic-logic の metadata | skill-version、design-name、design-version、design-url | キー | （根拠）読まれないキーを置かず、名前と重なる値を持たない。（決定日：2026-11-22） |
 | 索引の列 | 判断名、扱うこと、ファイル、依存する判断、計算 | 列 | 答え方3の理由1と同じ |
 | core-logic の定型文の項目数 | 5 | 項目 | 記録なし |
 | generic-logic の定型文の項目数 | 6 | 項目 | 記録なし |

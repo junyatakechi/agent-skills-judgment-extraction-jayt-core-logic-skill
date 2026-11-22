@@ -2,7 +2,7 @@
 sources:
   S1:
     name: "人の判断を切り出すAgent Skillsの設計"
-    version: "v3.6.0"
+    version: "3.6.0"
     url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
     checked: "2026-11-18"
 ---

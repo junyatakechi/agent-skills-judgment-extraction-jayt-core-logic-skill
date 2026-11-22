@@ -2,9 +2,14 @@
 sources:
   S1:
     name: "人の判断を切り出すAgent Skillsの設計"
-    version: "v4.0.0"
+    version: "4.0.0"
     url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
     checked: "2026-11-20"
+  S2:
+    name: "人の判断を切り出すAgent Skillsの設計"
+    version: "6.0.0"
+    url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
+    checked: "2026-11-22"
 ---
 
 # アプリケーションスキルの型
@@ -20,6 +25,7 @@ sources:
 設計文書を写す判断。5つの表の書き方は、この判断では答えない（→ [5つの表](app-tables.md)）。
 
 - （知見）設計文書の 6-1・6-2・6-3 を写した。（出典：S1）
+- （知見）metadata のキーは、設計文書の 6-1 を写した。（出典：S2）
 
 ### 1. フォルダと章を、決まった型で置く
 
@@ -68,7 +74,7 @@ sources:
 | 名前 | 値 | 単位 | 理由 |
 |---|---|---|---|
 | アプリケーションスキルの章 | 目的、要求と打ち手、中核判断の委任表、まだ切り出していない判断の表、一般的な業務知識の参照表、外部手順の依頼表、取り決めの表、このスキルの設計上の決まりごと | 見出し | 答え方1の理由1と同じ |
-| アプリケーションスキルの metadata | version、repository、design、design-url、dependencies | キー | 記録なし |
+| アプリケーションスキルの metadata | skill-version、design-name、design-version、design-url、dependencies | キー | （根拠）読まれないキーを置かず、名前と重なる値を持たない。（決定日：2026-11-22） |
 | アプリケーションスキルの定型文の項目数 | 7 | 項目 | 記録なし |
 | 要求の文末 | たい、ほしい、たくない | 語 | 答え方4の理由1と同じ |
 
