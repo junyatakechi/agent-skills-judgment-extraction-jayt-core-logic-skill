@@ -2,10 +2,10 @@
 name: agent-skills-judgment-extraction-jayt-core-logic-skill
 description: "文脈: 人の判断を切り出すAgent Skillsの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  version: "0.24.0"
+  version: "0.25.0"
   repository: "https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-core-logic-skill"
   author: "jayt"
-  design: "人の判断を切り出すAgent Skillsの設計_v5.0.0"
+  design: "人の判断を切り出すAgent Skillsの設計_v5.0.1"
   design-url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
 ---
 
@@ -25,7 +25,8 @@ metadata:
 | description | description を書くとき、何をどの形で書くか | [description.md](references/description.md) | — | — |
 | SKILL.md に入れる文 | SKILL.md に文を足すとき、入れるか、どの定型文を写し、frontmatter に何を書くか | [skill-md-sentences.md](references/skill-md-sentences.md) | `skill-kinds.md` | — |
 | 判断ファイルの形 | 判断ファイルを書く・直すとき、章をどう並べ、答え方・判断定数・未決・求める材料をどう書くか | [judgment-file.md](references/judgment-file.md) | `value-placement.md` | ○ |
-| 理由の書き方 | 判断ファイルに理由を書くとき、種類をどう選び、文末の印と出典をどう書くか | [reasons.md](references/reasons.md) | — | ○ |
+| 理由の書き方 | 判断ファイルに理由を書くとき、種類をどう選び、文末の印をどう付けるか | [reasons.md](references/reasons.md) | — | ○ |
+| 出典の書き方 | 判断ファイルに知見の出典を書くとき、frontmatter に何をどう書き、理由からどう指すか | [sources.md](references/sources.md) | `reasons.md` | ○ |
 | ロジックスキルの型 | ロジックスキルの SKILL.md を書くとき、どの章を置き、索引をどう書くか | [logic-skill-shape.md](references/logic-skill-shape.md) | `judgment-file.md` | ○ |
 | 判断に使う道具の作り方 | `judge.py` を作る・直すとき、呼び方・失敗の返し方・判断定数の読み方をどうするか | [judge-tool.md](references/judge-tool.md) | `tool-kinds.md`・`value-placement.md` | — |
 | ロジックスキルに書かないもの | ロジックスキルに書くとき、何を書かないか | [logic-exclusions.md](references/logic-exclusions.md) | `value-placement.md` | — |
@@ -47,7 +48,7 @@ metadata:
 | 判断の削除 | 判断を削除するとき、何を確かめ、何を一緒に直すか | [impl-judgment-removal.md](references/impl-judgment-removal.md) | `judgment-migration.md` | — |
 | 答え方の削除 | 判断ファイルの答え方を1つ消すように頼まれたとき、消すか、「〜しない」に置き換えるか、番号をどうするか | [impl-answer-removal.md](references/impl-answer-removal.md) | `judgment-file.md` | — |
 | 使われなくなった .env のキー | スキルを直して `.env` のキーを使わなくなったとき、そのキーをどうするか | [impl-unused-env-keys.md](references/impl-unused-env-keys.md) | `value-placement.md` | — |
-| 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | `judgment-file.md`・`reasons.md`・`logic-skill-shape.md`・`app-skill-shape.md`・`impl-judgment-details.md`・`impl-example-values.md`・`impl-procedure-copies.md`・`impl-material-shape.md`・`impl-db-values.md`・`impl-logic-app-boundary.md`・`impl-table-links.md` | — |
+| 書き替えたあとの確かめ方 | スキルを作った・直したあと、何で確かめるか | [impl-verification.md](references/impl-verification.md) | `judgment-file.md`・`reasons.md`・`sources.md`・`logic-skill-shape.md`・`app-skill-shape.md`・`impl-judgment-details.md`・`impl-example-values.md`・`impl-procedure-copies.md`・`impl-material-shape.md`・`impl-db-values.md`・`impl-logic-app-boundary.md`・`impl-table-links.md` | — |
 | 手順の写し | アプリケーションスキルの手順を書く・直すとき、表と判断の答えの写しをどう見つけ、どう直すか | [impl-procedure-copies.md](references/impl-procedure-copies.md) | `app-skill-shape.md`・`skill-kinds.md` | ○ |
 | DBに置いた値の見分け方 | アプリケーションスキルが読むDBに、判断定数・判断の定義・取り決め・公知の事実の写しが混ざっていないかを、どう見分け、どこへ移すか | [impl-db-values.md](references/impl-db-values.md) | `value-placement.md`・`impl-material-shape.md` | ○ |
 | 依存関係の図 | 依存関係を人に説明するとき、索引の「依存する判断」から、どんな図を作って見せるか | [impl-dependency-graph.md](references/impl-dependency-graph.md) | `logic-skill-shape.md` | ○ |

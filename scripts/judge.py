@@ -12,6 +12,7 @@ Usage:
 judgments/_common.py だけが持つ。頼まれた判断と、その依存先のファイルだけを読み込む。
   judgment-file          判断ファイルの形              → JSON（ファイルごとの問題）
   reasons                理由の書き方                  → JSON（ファイルごとの問題）
+  sources                出典の書き方                  → JSON（ファイルごとの問題）
   logic-skill-shape      ロジックスキルの型            → JSON（ファイルごとの問題）
   app-skill-shape        アプリケーションスキルの型    → JSON（ファイルごとの問題）
   impl-judgment-details  判断ファイルの細かな書き方    → JSON（ファイルごとの問題）

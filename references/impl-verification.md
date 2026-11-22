@@ -14,7 +14,7 @@
 
 ### 1. 計算で型を確かめてから、設計文書の章と見比べる
 
-スキルを作った・直したあとは、まず計算で型を確かめる。判断ファイルには `judgment-file`・`reasons`・`impl-judgment-details`、ロジックスキルには `logic-skill-shape`、アプリケーションスキルには `app-skill-shape`・`impl-procedure-copies`・`impl-material-shape`・`impl-table-links` を流し、DBを読むアプリケーションスキルには `impl-db-values` も流し、題材にした記録から作ったときは `impl-example-values` も流す。`問題` が空になるまで直す。材料は、確かめるスキルのフォルダを呼び出し側がまとめて作る。`impl-procedure-copies` には、依存するロジックスキルの `references/` も `判断先のファイル` として足す。`impl-db-values` が返す `確かめるDB` と `そのほかのDB` は、`問題` ではないので、DBごとに [DBに置いた値の見分け方](impl-db-values.md) の答え方1〜4を当てはめ、移すDBがあれば指示者に示す。
+スキルを作った・直したあとは、まず計算で型を確かめる。判断ファイルには `judgment-file`・`reasons`・`sources`・`impl-judgment-details`、ロジックスキルには `logic-skill-shape`、アプリケーションスキルには `app-skill-shape`・`impl-procedure-copies`・`impl-material-shape`・`impl-table-links` を流し、DBを読むアプリケーションスキルには `impl-db-values` も流し、題材にした記録から作ったときは `impl-example-values` も流す。`問題` が空になるまで直す。材料は、確かめるスキルのフォルダを呼び出し側がまとめて作る。`impl-procedure-copies` には、依存するロジックスキルの `references/` も `判断先のファイル` として足す。`impl-db-values` が返す `確かめるDB` と `そのほかのDB` は、`問題` ではないので、DBごとに [DBに置いた値の見分け方](impl-db-values.md) の答え方1〜4を当てはめ、移すDBがあれば指示者に示す。
 
 ```bash
 python -I -c "import json,os,sys; d=sys.argv[1]; f={os.path.relpath(os.path.join(r,n),d).replace(os.sep,'/'): open(os.path.join(r,n),encoding='utf-8').read() for r,_,ns in os.walk(d) if '.git' not in r and '__pycache__' not in r for n in ns if n.endswith(('.md','.py')) or n=='LICENSE'}; json.dump({'ファイル': f, '種類': sys.argv[2]}, open(sys.argv[3],'w',encoding='utf-8'), ensure_ascii=False)" <スキルのフォルダ> <core-logic|generic-logic|app> <材料.json>
