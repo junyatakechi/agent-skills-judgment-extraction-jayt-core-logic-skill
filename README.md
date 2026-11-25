@@ -7,7 +7,6 @@
 
 - [Claude Code](https://docs.claude.com/en/docs/claude-code/overview)
 - Python 3.11以上と [uv](https://docs.astral.sh/uv/)（型の確認の計算に使う）
-- 設計文書（`SKILL.md` の frontmatter の `metadata.design-version`）
 
 ## インストール
 
