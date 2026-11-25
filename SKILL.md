@@ -2,9 +2,9 @@
 name: agent-skills-judgment-extraction-jayt-core-logic-skill
 description: "文脈: 人の判断を切り出すAgent Skillsの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  skill-version: "0.27.0"
+  skill-version: "0.28.0"
   design-name: "人の判断を切り出すAgent Skillsの設計"
-  design-version: "6.0.1"
+  design-version: "7.0.0"
   design-url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
 ---
 
@@ -18,7 +18,7 @@ metadata:
 | 文脈と種類の見分け方 | 判断をスキルへ振り分けるとき・スキルを分ける・まとめるとき、文脈を何で切り、core-logic と generic-logic を何で見分けるか | [impl-context-and-kind.md](references/impl-context-and-kind.md) | `skill-kinds.md` | — |
 | 道具の種類 | 道具を作るとき、判断に使う道具と手続きに使う道具のどちらにし、どのスキルに置くか | [tool-kinds.md](references/tool-kinds.md) | `skill-kinds.md` | — |
 | 値の置き場所 | 値を書くとき、ロジックスキル・取り決めファイル・`.env`・材料のどこに置くか | [value-placement.md](references/value-placement.md) | — | — |
-| 名前 | スキルに名前を付けるとき、どの形にし、作成者を入れるか | [naming.md](references/naming.md) | `skill-kinds.md` | — |
+| 名前 | スキルに名前を付けるとき、どの形にし、作成者を入れ、アプリケーションスキルの動詞と対象をどう選ぶか | [naming.md](references/naming.md) | `skill-kinds.md` | — |
 | README | README を書くとき、どの章に何を書き、何を書かないか | [readme-contents.md](references/readme-contents.md) | `skill-kinds.md` | — |
 | README に書かない読み込ませ方 | README のセットアップと使い方を書くとき、スキルを会話の最初に読み込ませる設定を書くか | [impl-readme-loading.md](references/impl-readme-loading.md) | `readme-contents.md`・`description.md` | — |
 | description | description を書くとき、何をどの形で書くか | [description.md](references/description.md) | — | — |

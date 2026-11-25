@@ -35,7 +35,7 @@ sources:
 metadata:
   dependencies: >-
     github:<owner>/diet-process-<作成者>-core-logic-skill@^0.2.0,
-    github:<owner>/oura-collection-app-skill@^0.2.0
+    github:<owner>/collect-oura-records-app-skill@^0.2.0
 ```
 
 | 項目 | 書き方 |
