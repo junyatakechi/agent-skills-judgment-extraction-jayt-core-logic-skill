@@ -25,14 +25,15 @@ git clone https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-
 
 スキルを作る・直す作業のときに、名前を指名して呼ぶ。指名しないと、このスキルは読み込まれない。
 
-新しいスキルは、次の流れで作る。
+### 新しいスキルを作る
 
 1. AIエージェントにいろいろ頼みながら、作業を終える。
 2. この作業をまた繰り返すと思ったら、その会話のまま、このスキルを名前で指名して頼む。
    - 「/agent-skills-judgment-extraction-jayt-core-logic-skill ここまでの作業を、また繰り返せるようにスキルにして」
 3. AIエージェントがこのスキルに聞きながらスキルを作り、型どおりかを計算で確かめる。
 
-すでにあるスキルを直すときや、分からないことを聞くときも、名前で指名する。
+### すでにあるスキルに使う
 
-- 「/agent-skills-judgment-extraction-jayt-core-logic-skill この判断ファイルを今の型に直して」
-- 「/agent-skills-judgment-extraction-jayt-core-logic-skill この値は判断定数？取り決め？」
+- 「/agent-skills-judgment-extraction-jayt-core-logic-skill このスキルにある知識を整理して」
+- 「/agent-skills-judgment-extraction-jayt-core-logic-skill 環境に依存しているところを切り出して分けて」
+- 「/agent-skills-judgment-extraction-jayt-core-logic-skill この回答はどこで判断していますか？」
