@@ -5,16 +5,20 @@
 
 ## 必要なもの
 
-- [Claude Code](https://docs.claude.com/en/docs/claude-code/overview)
+- [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) か [Codex アプリ](https://learn.chatgpt.com/docs/app)
 - Python 3.11以上と [uv](https://docs.astral.sh/uv/)（型の確認の計算に使う）
 
 ## インストール
+
+Claude Code では、次のようにクローンする。
 
 ```bash
 git clone https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-core-logic-skill.git ~/.claude/skills/agent-skills-judgment-extraction-jayt-core-logic-skill
 ```
 
-特定のプロジェクトだけで使うなら、`<プロジェクト>/.claude/skills/` の中でクローンする。
+Codex アプリでは、`~/.claude/skills/` を `~/.agents/skills/` に替えてクローンする。
+
+特定のプロジェクトだけで使うなら、`<プロジェクト>/.claude/skills/`（Codex アプリは `<プロジェクト>/.agents/skills/`）の中でクローンする。
 
 ## セットアップ
 
