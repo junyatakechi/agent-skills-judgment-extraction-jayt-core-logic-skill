@@ -2,9 +2,9 @@
 name: agent-skills-judgment-extraction-jayt-core-logic-skill
 description: "文脈: 人の判断を切り出すAgent Skillsの設計。種類: 中核判断。使う場面: 名前で指名されたときだけ使い、会話の内容からは選ばない。"
 metadata:
-  skill-version: "0.28.0"
+  skill-version: "0.29.0"
   design-name: "人の判断を切り出すAgent Skillsの設計"
-  design-version: "7.0.0"
+  design-version: "7.0.1"
   design-url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
 ---
 
@@ -32,13 +32,13 @@ metadata:
 | ロジックスキルとアプリの境目 | ロジックスキルの判断ファイルを書く・見直すとき、アプリケーションスキルに置くべき決まりが混ざっていないかを、どう見分け、どこへ移すか | [impl-logic-app-boundary.md](references/impl-logic-app-boundary.md) | `logic-exclusions.md`・`conventions.md`・`dependencies.md` | — |
 | アプリケーションスキルの型 | アプリケーションスキルの SKILL.md を書くとき、どの章を置き、目的・要求・打ち手をどう書くか | [app-skill-shape.md](references/app-skill-shape.md) | — | ○ |
 | 5つの表 | 委任表・まだ切り出していない判断の表・参照表・依頼表・取り決めの表を書くとき、列とIDと見出しをどう書くか | [app-tables.md](references/app-tables.md) | `judgment-migration.md` | — |
-| 依存の宣言と版 | 依存するスキルを書くとき・判断ファイルを変えたとき、版の範囲と版をどう上げるか | [dependencies.md](references/dependencies.md) | — | — |
+| 依存の宣言とバージョン | 依存するスキルを書くとき・判断ファイルを変えたとき、バージョンの範囲とバージョンをどう上げるか | [dependencies.md](references/dependencies.md) | — | — |
 | 取り決めファイル | 取り決めファイルを書くとき、何を書き、判断ファイルとどう分けるか | [conventions.md](references/conventions.md) | `value-placement.md` | — |
 | 旧形式からの移し替え | 旧形式の判断ファイルや SKILL.md を今の型に移すとき、型に無い項目をどこへ移すか | [impl-legacy-migration.md](references/impl-legacy-migration.md) | `judgment-file.md`・`impl-procedure-copies.md`・`app-skill-shape.md` | — |
 | 判断ファイルの細かな書き方 | 判断ファイルを書くとき、実測の印の欠け・未決のIDの区切り・ほかの理由を指す項目・リンクをどう書くか | [impl-judgment-details.md](references/impl-judgment-details.md) | `reasons.md` | ○ |
 | 例に使う値 | 求める材料の形・README の頼み方・計算の例を書くとき、どの値を使うか | [impl-example-values.md](references/impl-example-values.md) | `logic-exclusions.md` | ○ |
 | 設定の不足の判断 | 一般的な業務知識のスキルを作る・直すとき、設定の不足の判断を足すか | [impl-missing-setup.md](references/impl-missing-setup.md) | `tool-kinds.md` | — |
-| 形だけ直したときの版 | 中身を変えずに形だけを直したとき、版をどう上げるか | [impl-version-bump.md](references/impl-version-bump.md) | `dependencies.md` | — |
+| 形だけ直したときのバージョン | 中身を変えずに形だけを直したとき、バージョンをどう上げるか | [impl-version-bump.md](references/impl-version-bump.md) | `dependencies.md` | — |
 | 表のファイル名のリンク | アプリケーションスキルの SKILL.md の表にファイル名を書くとき、リンクにするか | [impl-table-links.md](references/impl-table-links.md) | `app-tables.md` | ○ |
 | 出力の様式の指し方 | アプリケーションスキルの手順で、出力の様式の取り決めを、どの節から指すか | [impl-output-format-reference.md](references/impl-output-format-reference.md) | `app-skill-shape.md` | — |
 | 目的と要求の言葉 | アプリケーションスキルの目的と要求を書くとき、誰の言葉で決め、AIエージェントが出した案をどう扱うか | [impl-purpose-wording.md](references/impl-purpose-wording.md) | `app-skill-shape.md` | — |

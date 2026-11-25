@@ -2,13 +2,13 @@
 # /// script
 # requires-python = ">=3.11"
 # ///
-"""agent-skills-judgment-extraction-jayt-core-logic-skill の計算の入口。スキルのファイルの本文を材料として受け取り、型を確かめる。
+"""agent-skills-judgment-extraction-jayt-core-logic-skill の計算のエントリポイント。スキルのファイルの本文を材料として受け取り、型を確かめる。
 
 Usage:
   uv run judge.py <判断> <材料.json>
 
 <判断> は references/ のファイル名（拡張子なし）。計算を持つのは、judgments/ に同じ名前の
-ファイルがある判断だけ。入口はこの1本で、失敗の返し方と依存先の読み込みをここと
+ファイルがある判断だけ。エントリポイントはこの1本で、失敗の返し方と依存先の読み込みをここと
 judgments/_common.py だけが持つ。頼まれた判断と、その依存先のファイルだけを読み込む。
   judgment-file          判断ファイルの形              → JSON（ファイルごとの問題）
   reasons                理由の書き方                  → JSON（ファイルごとの問題）
