@@ -5,7 +5,7 @@
 
 ## 必要なもの
 
-- [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) か [Codex アプリ](https://learn.chatgpt.com/docs/app)
+- [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) か [Codex](https://developers.openai.com/codex)
 - Python 3.11以上と [uv](https://docs.astral.sh/uv/)（型の確認の計算に使う）
 
 ## インストール
@@ -16,9 +16,9 @@ Claude Code では、次のようにクローンする。
 git clone https://github.com/junyatakechi/agent-skills-judgment-extraction-jayt-core-logic-skill.git ~/.claude/skills/agent-skills-judgment-extraction-jayt-core-logic-skill
 ```
 
-Codex アプリでは、`~/.claude/skills/` を `~/.agents/skills/` に替えてクローンする。
+Codex では、`~/.claude/skills/` を `~/.agents/skills/` に替えてクローンする。
 
-特定のプロジェクトだけで使うなら、`<プロジェクト>/.claude/skills/`（Codex アプリは `<プロジェクト>/.agents/skills/`）の中でクローンする。
+特定のプロジェクトだけで使うなら、`<プロジェクト>/.claude/skills/`（Codex は `<プロジェクト>/.agents/skills/`）の中でクローンする。
 
 ## セットアップ
 
@@ -26,7 +26,7 @@ Codex アプリでは、`~/.claude/skills/` を `~/.agents/skills/` に替えて
 
 ## 使い方
 
-スキルを作る・直す作業のときに、名前を指名して呼ぶ。指名しないと、このスキルは読み込まれない。
+スキルを作る・直す作業のときに、名前を指名して呼ぶ。指名しないと、このスキルは読み込まれない。Codex では、例の `/` を `$` に替えて指名する。
 
 ### 新しいスキルを作る
 
