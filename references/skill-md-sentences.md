@@ -3,17 +3,17 @@ sources:
   S1:
     name: "人の判断を切り出すAgent Skillsの設計"
     version: "4.0.0"
-    url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
+    url: "https://zenn.dev/jayt/articles/agent-skills-judgment-extraction"
     checked: "2026-11-20"
   S2:
     name: "人の判断を切り出すAgent Skillsの設計"
     version: "6.0.1"
-    url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
+    url: "https://zenn.dev/jayt/articles/agent-skills-judgment-extraction"
     checked: "2026-11-22"
   S3:
     name: "人の判断を切り出すAgent Skillsの設計"
     version: "7.0.1"
-    url: "https://app.notion.com/p/3eaf2fd6925e8102b86fee3b6b3dd5a3"
+    url: "https://zenn.dev/jayt/articles/agent-skills-judgment-extraction"
     checked: "2026-11-25"
 ---
 
